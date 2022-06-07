@@ -5,6 +5,7 @@ require "Author.php";
 
 $messages = []; //empty messages for session
 
+//looks for a session if exist, if yes keep it in var and delete from session
 if (!empty($_SESSION['flashed_messages'])) {
     $messages = $_SESSION['flashed_messages'];
     unset($_SESSION['flashed_messages']);
